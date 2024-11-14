@@ -9,6 +9,9 @@ import SwiftUI
 
 struct QuizView: View {
     @State private var userInput = ""
+    @State private var displayedText = ""
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     let quiz : QuizItem
     var body: some View {
         VStack(alignment: .leading) {
@@ -43,11 +46,37 @@ struct QuizView: View {
                 }
                 
             }
-            HStack{
+            VStack{
                 TextField("Escribe la respuesta aquí", text: $userInput)
-                                .padding()  // Agrega espacio dentro del TextField
-                                .textFieldStyle(RoundedBorderTextFieldStyle())  // Estilo del TextField
-                                .frame(width: 300)  // Establece un ancho fijo para el TextField
+                    .padding()  // Agrega espacio dentro del TextField
+                    .textFieldStyle(RoundedBorderTextFieldStyle())  // Estilo del TextField
+                    .frame(width: 300)  // Establece un ancho fijo para el TextField
+                Button(action: {
+                    displayedText = userInput
+                    if displayedText.lowercased() == quiz.answer.lowercased() {
+                        // Respuesta correcta
+                        alertMessage = "¡Enhorabuena!"
+                    } else {
+                        // Respuesta incorrecta
+                        alertMessage = "Respuesta Incorrecta. Inténtalo otra vez."
+                    }
+                    showAlert = true
+                }) {
+                    Text("Comprobar respuesta")
+                        .font(.headline)
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+                .alert(isPresented: $showAlert) {
+                    Alert(
+                        title: Text(alertMessage),
+                        message: Text("¡Buen intento!"),
+                        dismissButton: .default(Text("OK"))
+                    )
+                }
+                .padding()
             }
             
         }

@@ -54,3 +54,7 @@ struct RowView: View {
         }
     }
 
+#Preview {
+    let quizItem = QuizItem(id: 1, question: "¿Cuál es la capital de Francia?", answer: "París", author: nil, attachment: nil, favourite: false)
+    RowView(quiz: quizItem)
+}

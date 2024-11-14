@@ -11,17 +11,22 @@ struct QuizzesView: View {
     @StateObject private var quizzesModel = QuizzesModel()  // Crear instancia de QuizzesModel
     
     var body: some View {
-        NavigationStack{
+        NavigationView{
             List(quizzesModel.quizzes) { quiz in  // Usamos quizzesModel.quizzes como fuente de datos
-                NavigationLink(destination: QuizView(quiz: quiz)) {
-                    RowView(quiz: quiz)
+                NavigationLink(destination: QuizView(quiz: quiz))
+                {
+                    RowView(quiz:quiz)
                     
                 }
-                .onAppear {
-                    quizzesModel.load()  // Cargar los quizzes cuando la vista aparece
-                }
-                .navigationTitle("Quizzes")  // Título de la vista
             }
+            .navigationTitle("Quizzes")
+            .onAppear {
+                quizzesModel.load()  // Cargar los quizzes cuando la vista aparece
+            }// Título de la vista
         }
     }
+}
+
+#Preview {
+    QuizzesView()
 }
