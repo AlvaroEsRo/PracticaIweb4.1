@@ -9,17 +9,26 @@ import SwiftUI
 
 struct QuizzesView: View {
     @StateObject private var quizzesModel = QuizzesModel()  // Crear instancia de QuizzesModel
+    @State private var quizzesAcertados : [QuizItem.ID] = []
     
     var body: some View {
         NavigationView{
             List(quizzesModel.quizzes) { quiz in  // Usamos quizzesModel.quizzes como fuente de datos
-                NavigationLink(destination: QuizView(quiz: quiz))
+                NavigationLink(destination: QuizView(quizzesAcertados: $quizzesAcertados, quiz: quiz))
                 {
                     RowView(quiz:quiz)
                     
                 }
             }
             .navigationTitle("Quizzes")
+            .toolbar {
+                           // Añadir el contador al lado derecho del título
+                           ToolbarItem(placement: .navigationBarTrailing) {
+                               Text("Quizzes Acertados: \(quizzesAcertados.count)")  // Muestra el número de quizzes acertados
+                                   .font(.subheadline)
+                                   .foregroundColor(.green)
+                           }
+                       }
             .onAppear {
                 quizzesModel.load()  // Cargar los quizzes cuando la vista aparece
             }// Título de la vista

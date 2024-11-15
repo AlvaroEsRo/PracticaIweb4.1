@@ -12,6 +12,8 @@ struct QuizView: View {
     @State private var displayedText = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @Binding var quizzesAcertados: [QuizItem.ID]
+    
     let quiz : QuizItem
     var body: some View {
         VStack(alignment: .leading) {
@@ -56,6 +58,8 @@ struct QuizView: View {
                     if displayedText.lowercased() == quiz.answer.lowercased() {
                         // Respuesta correcta
                         alertMessage = "¡Enhorabuena!"
+                        quizzesAcertados.append(quiz.id)
+                        
                     } else {
                         // Respuesta incorrecta
                         alertMessage = "Respuesta Incorrecta. Inténtalo otra vez."
