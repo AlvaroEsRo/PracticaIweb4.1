@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		3FCEF12B2CE61D1C00427A57 /* P4.1_quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P4.1_quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BF2B4152CF0864D00D863B7 /* P4.1_quizzes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = P4.1_quizzes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -33,16 +33,8 @@
 			isa = PBXGroup;
 			children = (
 				3FCEF12D2CE61D1C00427A57 /* P4.1_quizzes */,
-				3FCEF12C2CE61D1C00427A57 /* Products */,
+				3BF2B4152CF0864D00D863B7 /* P4.1_quizzes.app */,
 			);
-			sourceTree = "<group>";
-		};
-		3FCEF12C2CE61D1C00427A57 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				3FCEF12B2CE61D1C00427A57 /* P4.1_quizzes.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -67,7 +59,7 @@
 			packageProductDependencies = (
 			);
 			productName = P4.1_quizzes;
-			productReference = 3FCEF12B2CE61D1C00427A57 /* P4.1_quizzes.app */;
+			productReference = 3BF2B4152CF0864D00D863B7 /* P4.1_quizzes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -95,7 +87,7 @@
 			mainGroup = 3FCEF1222CE61D1C00427A57;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 3FCEF12C2CE61D1C00427A57 /* Products */;
+			productRefGroup = 3FCEF1222CE61D1C00427A57;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -254,9 +246,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"P4.1_quizzes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "P4-1-quizzes-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = QuizzesApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -282,9 +275,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"P4.1_quizzes/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "P4-1-quizzes-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = QuizzesApp;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
