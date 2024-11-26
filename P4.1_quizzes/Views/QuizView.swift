@@ -122,7 +122,6 @@ struct QuizView: View {
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text(alertMessage),
-                        message: Text("¡Buen intento!"),
                         dismissButton: .default(Text("OK"))
                     )
                 }
@@ -261,7 +260,6 @@ struct QuizView: View {
                     .alert(isPresented: $showAlert) {
                         Alert(
                             title: Text(alertMessage),
-                            message: Text("¡Buen intento!"),
                             dismissButton: .default(Text("OK"))
                         )
                     }
